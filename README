@@ -1,0 +1,26 @@
+# login-jwt
+
+Este proyecto es una aplicación Node.js que proporciona autenticación de usuario utilizando JSON Web Tokens (JWT).
+
+## Instalación
+
+Para ejecutar esta aplicación localmente utilizando Docker, asegúrate de tener Docker instalado en tu máquina. A continuación, sigue estos pasos:
+
+1. Clona este repositorio en tu máquina local:
+
+````bash
+git clone https://github.com/Morenosebas/login-jwt.git
+````
+Navega hasta el directorio del proyecto:
+```bash
+cd login-jwt
+````
+Construye la imagen Docker:
+```bash
+docker build -t login-jwt .
+````
+Ejecuta un contenedor basado en la imagen recién creada:
+```bash
+docker run -p 3000:3000 login-jwt
+````
+La aplicación estará disponible en http://localhost:3000.
