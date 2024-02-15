@@ -1,0 +1,611 @@
+{
+	"info": {
+		"_postman_id": "fbee7bbb-fcfb-4f50-b1cf-5361edf29461",
+		"name": "Auth-jwt",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "25404080"
+	},
+	"item": [
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"admin\",\n    \"password\":\"admin123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/api/signup"
+			},
+			"response": [
+				{
+					"name": "signup",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\":\"admin\",\n    \"password\":\"admin123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/signup"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "94"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"5e-EBi9TxOQie/e246eaVe0Dkui5ss\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 15 Feb 2024 18:40:23 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"username\": \"admin\",\n    \"password\": \"$2b$10$mgPK2Oiz/hu3LddvCxnnHOxRbrrWJ5GoXD2fEdBN2kMTjiJRIgYS2\"\n}"
+				}
+			]
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"admin_nuevo\",\n    \"password\":\"admin123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/api/login"
+			},
+			"response": [
+				{
+					"name": "login-error",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\":\"admin\",\n    \"password\":\"admin123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/login"
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "26"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1a-hq/hT0ORGTkTfyRpVCZ/JB/r8Eg\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 15 Feb 2024 18:39:17 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": \"User not found\"\n}"
+				},
+				{
+					"name": "login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\":\"admin_nuevo\",\n    \"password\":\"admin123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/login"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "x-auth-token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywidXNlcm5hbWUiOiJhZG1pbl9udWV2byIsImlhdCI6MTcwODAyMjQwMCwiZXhwIjoxNzA4MDI2MDAwfQ.iUsiIoc5O9gmldTAcAWpFhzgCNgaiht3iZO_Ru6O4PA; Path=/; HttpOnly"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "224"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"e0-5z8Nbr0OceVKmLzyOLNNEosHP4Y\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 15 Feb 2024 18:40:00 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywidXNlcm5hbWUiOiJhZG1pbl9udWV2byIsImlhdCI6MTcwODAyMjQwMCwiZXhwIjoxNzA4MDI2MDAwfQ.iUsiIoc5O9gmldTAcAWpFhzgCNgaiht3iZO_Ru6O4PA\",\n    \"user\": {\n        \"id\": 3,\n        \"username\": \"admin_nuevo\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "users",
+			"request": {
+				"auth": {
+					"type": "jwt",
+					"jwt": {
+						"addTokenTo": "header",
+						"algorithm": "HS256",
+						"isSecretBase64Encoded": false,
+						"payload": "{}",
+						"headerPrefix": "Bearer",
+						"queryParamKey": "token",
+						"header": "{}"
+					}
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNzA4MDE4NTAzLCJleHAiOjE3MDgwMjIxMDN9.lJnNC5KgwGUIFI0cAFga9v-osnh_rDTE-W0MBEyubTw",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": "http://localhost:3000/api/users"
+			},
+			"response": [
+				{
+					"name": "users",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNzA4MDE4NTAzLCJleHAiOjE3MDgwMjIxMDN9.lJnNC5KgwGUIFI0cAFga9v-osnh_rDTE-W0MBEyubTw",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\":\"admin\",\n    \"password\":\"admin123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/users"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "73"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"49-xVnh6MF2haaCXrUt3QgAivgEvqg\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 15 Feb 2024 18:40:31 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"users\": [\n        {\n            \"id\": 4,\n            \"username\": \"admin\"\n        },\n        {\n            \"id\": 3,\n            \"username\": \"admin_nuevo\"\n        }\n    ]\n}"
+				},
+				{
+					"name": "users-error",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNzA4MDE4NTAzLCJleHAiOjE3MDgwMjIxMDN9.lJnNC5KgwGUIFI0cAFga9v-osnh_rDTE-W0MBEyubTw",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\":\"admin\",\n    \"password\":\"admin123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/users"
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "x-auth-token=; Path=/; Expires=Thu, 01 Jan 1970 00:00:00 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "46"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2e-1JZFT9SvLlGVGdN0Wva5QBRwDVQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 15 Feb 2024 18:40:53 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": \"No cookies found, refresh session.\"\n}"
+				}
+			]
+		},
+		{
+			"name": "logout",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": "http://localhost:3000/api/logout"
+			},
+			"response": [
+				{
+					"name": "logout",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\":\"admin\",\n    \"password\":\"admin123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/logout"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "x-auth-token=; Path=/; Expires=Thu, 01 Jan 1970 00:00:00 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "29"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1d-K3gZ1APDm69n04OkdSHCmP0j1Qw\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 15 Feb 2024 18:39:03 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"User logged out\"\n}"
+				}
+			]
+		},
+		{
+			"name": "modify",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"admin_nuevo\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/:id/modify",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						":id",
+						"modify"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "modify",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\":\"admin_nuevo\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/3/modify",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"3",
+								"modify"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "44"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2c-/A7dFaCcxQsrHGKtoUeUWJN0E2s\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 15 Feb 2024 18:38:38 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"user\": {\n        \"id\": \"3\",\n        \"username\": \"admin_nuevo\"\n    }\n}"
+				},
+				{
+					"name": "modify-error",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\":\"admin_nuevo\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/3/modify",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"3",
+								"modify"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "46"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2e-1JZFT9SvLlGVGdN0Wva5QBRwDVQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 15 Feb 2024 18:41:05 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": \"No cookies found, refresh session.\"\n}"
+				}
+			]
+		}
+	]
+}
