@@ -1,7 +1,7 @@
 {
-  "name": "login-jwt",
+  "name": "login",
   "version": "1.0.0",
-  "description": "login-jwt",
+  "description": "login",
   "main": "src/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Morenosebas/login-jwt.git"
+    "url": "git+https://github.com/Morenosebas/login.git"
   },
   "author": "johang31m",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Morenosebas/login-jwt/issues"
+    "url": "https://github.com/Morenosebas/login/issues"
   },
-  "homepage": "https://github.com/Morenosebas/login-jwt#readme",
+  "homepage": "https://github.com/Morenosebas/login#readme",
   "dependencies": {
     "bcrypt": "^5.1.1",
     "cookie-parser": "^1.4.6",
