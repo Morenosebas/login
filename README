@@ -31,3 +31,10 @@ docker run -p 3000:3000 login
 ```
 
 La aplicación estará disponible en http://localhost:3000.
+
+
+### Respaldo de Base de Datos MySQL
+El respaldo de la base de datos MySQL se encuentra en el archivo `respaldo.sql`.
+
+### Colección de Postman
+La colección de Postman para realizar pruebas de la API se encuentra en el archivo `Auth-jwt.postman_collection.json`.
